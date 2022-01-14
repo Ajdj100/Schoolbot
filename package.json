@@ -1,0 +1,14 @@
+{
+  "name": "the-mulkster",
+  "version": "1.0.0",
+  "description": "Conestoga Computer Science Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajdj100",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
