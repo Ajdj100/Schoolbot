@@ -8,14 +8,18 @@ module.exports = {
         console.log(`/lab used by ${interaction.user.username} in ${interaction.channelId}`);
         
         //variable to hold users lab
-        const lab = new String(""); 
+        const lab = new String("");  //UNUSED, Saving for later rewrite
 
-        lab 
-        if(interaction.member.roles.cache.has('933440451892092948')) {
-            console.log('user is in block 3');
-            await interaction.reply({content: 'You are in block 3.', ephemeral: true});
+        //if the member has role ID of a block
+        if(interaction.member.roles.cache.has('884797865258524712')) {
+            console.log('user is in lab 1');
+            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
+        } else if(interaction.member.roles.cache.has('884797917204975687')) {
+            console.log('user is in lab 2');
+            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
+        }else if(interaction.member.roles.cache.has('933440451892092948')) {
+            console.log('user is in lab 3');
+            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
         }
-        
-        //await interaction.reply(`You are in ${lab}`);
     },
 };
