@@ -13,16 +13,16 @@ module.exports = {
         //if the member has role ID of a block
         if(interaction.member.roles.cache.has('884797865258524712')) {
             console.log('user is in lab 1');
-            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
+            interaction.reply({content: 'You are in lab 1.', ephemeral: true});
         } else if(interaction.member.roles.cache.has('884797917204975687')) {
             console.log('user is in lab 2');
-            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
+            interaction.reply({content: 'You are in lab 2.', ephemeral: true});
         } else if(interaction.member.roles.cache.has('884797948238647296')) {
             console.log('user is in lab 3');
-            await interaction.reply({content: 'You are in lab 3.', ephemeral: true});
+            interaction.reply({content: 'You are in lab 3.', ephemeral: true});
         } else {
             console.log("Couldn't get user role");
-            await interaction.reply({content: "Error getting lab, you either dont have the role or something went wrong", ephemeral: true});
+            interaction.reply({content: "Error getting lab, you either dont have the role or something went wrong", ephemeral: true});
         }
     },
 };
