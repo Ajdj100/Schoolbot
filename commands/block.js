@@ -21,8 +21,8 @@ module.exports = {
             console.log('user is in lab 3');
             interaction.reply({content: 'You are in lab 3.', ephemeral: true});
         } else {
-            console.log("Couldn't get user role");
-            interaction.reply({content: "Error getting lab, you either dont have the role or something went wrong", ephemeral: true});
+            console.error("Couldn't get user role");
+            interaction.reply({content: "I couldn't find your lab number. Make sure you have the correct role and contact @ajdj100 if the problem continues.", ephemeral: true});
         }
     },
 };
