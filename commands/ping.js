@@ -7,25 +7,22 @@ module.exports = {
         .setDescription("Gets some bot informaton."),
     async execute(interaction) {
         const sendTime = new Number(Date.now());
-        console.log(`Ping requested at ${sendTime}`);
+        console.log(`/ping used by ${interaction.user.username} in ${interaction.channelId}`);
+        
+
+        console.log(`Response sent in ${Date.now()-sendTime}`)
+        
         pongEmbed.setDescription(`
         Response time: ${Date.now()-sendTime} ms
         Bot uptime:    ${getUptime()}
         `);
 
-        console.log(`/ping used by ${interaction.user.username} in ${interaction.channelId}`);
-        await interaction.reply({ embeds: [pongEmbed]});
-        console.log(`Response sent in ${Date.now()-sendTime}`);
+        const intr = interaction.reply({ embeds: [pongEmbed]})
+        
     },
 };
 
 //embed formatting
-const attackLogEmbed = new MessageEmbed()
-.setAuthor("Attack Detected")
-  .setColor(0xF50A0A)
-  .setURL("https://discord.js.org/#/docs/main/stable/class/MessageEmbed")
-  .setTimestamp()
-
   const pongEmbed = new MessageEmbed()
   .setAuthor("Pong!")
   .setColor(0x1E73EF)
