@@ -7,7 +7,7 @@ module.exports = {
         .addStringOption(message => message.setName('class').setDescription('The code for the class')),
     async execute(interaction) {
         console.log(`Zoom Link used by ${interaction.user.username} in ${interaction.channelId}`);
-        await interaction.deferReply({ephemeral: true});
+        interaction.deferReply({ephemeral: true});
 
         const str = interaction.options.getString('class');
         
