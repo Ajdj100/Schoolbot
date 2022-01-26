@@ -6,18 +6,18 @@ module.exports = {
         .setName('ping')
         .setDescription("Gets some bot informaton."),
     async execute(interaction) {
-        const sendTime = new Number(Date.now());
+        //interaction.deferReply();
         console.log(`/ping used by ${interaction.user.username} in ${interaction.channelId}`);
         
 
-        console.log(`Response sent in ${Date.now()-sendTime}`)
+        console.log(`Response sent in ${Date.now()-interaction.createdTimestamp} ms`)
         
         pongEmbed.setDescription(`
-        Response time: ${Date.now()-sendTime} ms
+        Response time: ${Date.now()-interaction.createdTimestamp} ms
         Bot uptime:    ${getUptime()}
         `);
 
-        const intr = interaction.reply({ embeds: [pongEmbed]})
+        await interaction.reply({ embeds: [pongEmbed]})
         
     },
 };
