@@ -32,7 +32,7 @@ module.exports = {
                 await interaction.editReply({content:"https://conestogac.zoom.us/j/97858504158?pwd=K01nNWxGdWVjanJCSGpMd3NDT2FLdz09", ephemeral: true});
             break;
             case 'prog72365':
-                await interaction.editReply({content:"https://conestogac.zoom.us/j/94265642057?pwd=REpiV2VRWVNZeUFTZkg5RnBabFRxdz09 ", ephemeral: true});
+                await interaction.editReply({content:"https://conestogac.zoom.us/j/94160545617?pwd=VDJqY3dqdjBsL01WQkRWSktBdS92QT09", ephemeral: true});
             break;
             case 'soc71500':
                 await interaction.editReply({content:"https://conestogac.zoom.us/j/92876046146?pwd=dDZxalhUM2RhKzRXeEFVcG40cXBRQT09", ephemeral: true});
