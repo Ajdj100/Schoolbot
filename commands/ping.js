@@ -18,6 +18,13 @@ module.exports = {
         `);
 
         await interaction.reply({ embeds: [pongEmbed]})
+
+        pongEmbed.setDescription(`
+        Response time: ${Date.now()-interaction.createdTimestamp} ms
+        Bot uptime:    ${getUptime()}
+        `);
+
+        await interaction.editReply({ embeds: [pongEmbed] });
         
     },
 };
