@@ -7,8 +7,8 @@ module.exports = {
         .addStringOption(message => message.setName('class').setDescription('The code for the class')),
     async execute(interaction) {
         console.log(`Zoom Link used by ${interaction.user.username} in ${interaction.channelId}`);
-    try {
-        interaction.deferReply({ephemeral: true});
+
+        await interaction.deferReply();
 
         const str = interaction.options.getString('class');
         
@@ -41,8 +41,6 @@ module.exports = {
                 await interaction.editReply({content:"Please enter a valid course ID", ephemeral: true});
             break;
         }
-    } catch(error) {
-        console.error(error);
-    }
+
     },
 };
