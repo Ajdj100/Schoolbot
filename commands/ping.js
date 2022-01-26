@@ -6,7 +6,7 @@ module.exports = {
         .setName('ping')
         .setDescription("Gets some bot informaton."),
     async execute(interaction) {
-        //interaction.deferReply();
+        await interaction.deferReply();
         console.log(`/ping used by ${interaction.user.username} in ${interaction.channelId}`);
         
 
