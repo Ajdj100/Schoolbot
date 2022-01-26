@@ -17,7 +17,7 @@ module.exports = {
         Bot uptime:    ${getUptime()}
         `);
 
-        await interaction.reply({ embeds: [pongEmbed]})
+        await interaction.editReply({ embeds: [pongEmbed]})
 
         pongEmbed.setDescription(`
         Response time: ${Date.now()-interaction.createdTimestamp} ms
