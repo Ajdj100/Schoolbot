@@ -8,7 +8,7 @@ module.exports = {
     async execute(interaction) {
         console.log(`Zoom Link used by ${interaction.user.username} in ${interaction.channelId}`);
 
-        await interaction.deferReply();
+        await interaction.deferReply({ephemeral: true});
 
         const str = interaction.options.getString('class');
         

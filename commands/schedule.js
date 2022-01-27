@@ -5,7 +5,7 @@ module.exports = {
         .setName('schedule')
         .setDescription("Shows you your schedule."),
     async execute(interaction) {
-        await interaction.deferReply();
+        await interaction.deferReply({ephemeral: true});
         console.log(`/schedule used by ${interaction.user.username} in ${interaction.channelId}`);
 
         //if the member has role ID of a block

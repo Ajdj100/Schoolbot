@@ -5,7 +5,7 @@ module.exports = {
         .setName('lab')
         .setDescription("Tells you what lab you are in."),
     async execute(interaction) {
-        await interaction.deferReply();
+        await interaction.deferReply({ephemeral: true});
         console.log(`/lab used by ${interaction.user.username} in ${interaction.channelId}`);
         
         //variable to hold users lab
