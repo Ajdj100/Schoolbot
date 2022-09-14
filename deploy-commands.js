@@ -1,7 +1,7 @@
 //NOTE
 //deploy commands requires the guildId of the server deploying to
 //it also requires the userId of the bot, probably to link the commands to it
-
+//checking how to push
 const fs = require('fs');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { REST } = require('@discordjs/rest');
